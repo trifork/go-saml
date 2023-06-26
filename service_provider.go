@@ -600,6 +600,9 @@ func (e ErrBadStatus) Error() string {
 // ParseResponse extracts the SAML IDP response received in req, resolves
 // artifacts when necessary, validates it, and returns the verified assertion.
 func (sp *ServiceProvider) ParseResponse(req *http.Request, possibleRequestIDs []string) (*Assertion, error) {
+	fmt.Printf(">>>>>>>>>> In the fork <<<<<<<<<<")
+	fmt.Printf(">>>>>>>>>> In the fork <<<<<<<<<<")
+	fmt.Printf(">>>>>>>>>> In the fork <<<<<<<<<<")
 	if artifactID := req.Form.Get("SAMLart"); artifactID != "" {
 		return sp.handleArtifactRequest(req.Context(), artifactID, possibleRequestIDs)
 	}
